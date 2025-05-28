@@ -1,28 +1,51 @@
-*{
+/*resetando o css*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #f5f5f5;
     padding: 20px;
 }
 
-header{
+header {
     background-color: #e4002b;
     text-align: center;
     color: white;
 }
-        
+
 .container {
-
-    /*max-width: 1200px;
-    centralizar ele*/
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.menu-navegacao{
-    /*background-color: white;*/
+.menu-navegacao {
+
+    background-color: white;
+
+    /*efeito tanto na horizontal, quanto na vertical*/
+    overflow-x: auto;
+    /*aplicar o overflow apenas na horizontal*/
+
+
+    white-space: nowrap;
 }
 
-            
+.menu-tabelas {
+    display: flex;
+    /*Um item do lado do outro*/
+    justify-content: center;
+}
+
+.menu-tab.active {
+    /*Para saber seção está*/
+    /*border-bottom: 3px solid #e4002b;*/
+    color: #e4002b;
+    font-weight: 600;
+}
+
+.menu-tab:hover {
+    background-color: #f9f9f9;
+}
