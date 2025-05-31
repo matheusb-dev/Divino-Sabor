@@ -1,5 +1,115 @@
+/* Responsividade para diferentes dispositivos */
 @media (max-width: 768px) {
-    .container {
-    
+    .produtos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-controles {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-adicionar {
+        width: 100%;
+    }
+
+    .carrinho-item {
+        flex-wrap: wrap;
+    }
+
+    .carrinho-item-controles {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+/* Estilos específicos para smartwatches */
+@media (max-width: 320px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .menu-tab {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .produto-img {
+        height: 150px;
+    }
+
+    .produto-titulo {
+        font-size: 16px;
+    }
+
+    .produto-preco {
+        font-size: 16px;
+    }
+
+    .quantidade-controle {
+        display: none;
+        /* Simplifica a interface em telas muito pequenas */
+    }
+
+    .btn-adicionar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .carrinho-header {
+        padding: 10px;
+    }
+
+    .carrinho-titulo {
+        font-size: 16px;
+    }
+
+    .carrinho {
+        padding: 10px;
+        max-height: 200px;
+    }
+
+    .carrinho-item-nome {
+        font-size: 14px;
+    }
+
+    .carrinho-total {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .btn-enviar {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .cart-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .cart-counter {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
     }
 }
