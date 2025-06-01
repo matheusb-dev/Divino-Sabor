@@ -309,7 +309,7 @@ btnEnviar.addEventListener('click', () => {
     mensagem += `%0A*Total: ${total}*%0A%0A`;
     mensagem += "🛵 Quero fazer esse pedido!";
 
-    const numeroWhatsApp = "5544999074397"; // <-- substitua pelo número do seu WhatsApp com DDI e DDD
+    const numeroWhatsApp = "5544988318390"; // <-- substitua pelo número do seu WhatsApp com DDI e DDD
     const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
 
     // Abrir WhatsApp
