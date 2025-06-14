@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Divino Sabor - Página Inicial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_inicial.css" />
+    <style>
+      /* Estilo para remover marcadores e alinhar listas */
+      .footer-section ul {
+        list-style-type: none; /* Remove os marcadores */
+        padding: 0; /* Remove o padding */
+        margin: 0; /* Remove a margem */
+        text-align: left; /* Alinha o texto à esquerda */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-stripe"></div>
+
+    <header>
+      <div class="header-inner" role="banner">
+        <div>
+          <div class="logo" aria-label="Divino Sabor logo">Divino Sabor</div>
+          <div class="logo-subtitle">Café - Salgados - Sucos - Bebidas</div>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Menu principal">
+          <a href="#">Página Inicial</a>
+          <a href="#">Promoções</a>
+          <a href="/Pages/compras.html">Cardápio</a>
+          <a href="#">Contato</a>
+        </nav>
+
+        <button
+          class="mobile-menu-button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="#ff0000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Menu móvel">
+        <a href="#">Página Inicial</a>
+        <a href="#">Promoções</a>
+        <a href="/Pages/compras.html">Cardápio</a>
+        <a href="#">Contato</a>
+      </nav>
+    </header>
+
+    <main role="main">
+      <h2>Destaques do Mês</h2>
+      <p>Confira nossas promoções e produtos especiais!</p>
+      <section class="cards" aria-label="Produtos em destaque">
+        <article class="card" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5fa4f075-dbb4-46fa-b838-c6b060670f77.png"
+            alt="Foto de uma coxinha especial dourada e crocante"
+          />
+          <h3>Coxinha Especial</h3>
+          <p>
+            Coxinha crocante e recheada com frango temperado. Promoção especial
+            por tempo limitado.
+          </p>
+        </article>
+        <article class="card" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9cd129d1-84a4-4e7e-9a30-2023b46ab413.png"
+            alt="Copo de suco natural com pedaços de frutas frescas"
+          />
+          <h3>Suco Natural</h3>
+          <p>
+            Suco feito com frutas frescas selecionadas, sem conservantes.
+            Refrescante e saudável.
+          </p>
+        </article>
+        <article class="card" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0d12a318-851f-464f-9e2a-5787d0cbbda2.png"
+            alt="Pães de queijo quentinhos e dourados servidos no prato"
+          />
+          <h3>Pão de Queijo</h3>
+          <p>
+            Tradicional pão de queijo mineiro, macio por dentro e levemente
+            crocante por fora.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-container">
+        <section
+          class="footer-section contact-info"
+          aria-labelledby="footer-contact"
+        >
+          <h4 id="footer-contact">Contato</h4>
+          <p>
+            Endereço: R. Prof. Laertes Munhoz - Nova Esperança, PR, 87600-000
+          </p>
+          <p>Telefone: 44 99910-4397</p>
+          <p>Email: salgadosdomingos@gmail.com</p>
+        </section>
+
+        <section
+          class="footer-section payment-info"
+          aria-labelledby="footer-payment"
+        >
+          <h4 id="footer-payment">Formas de Pagamento</h4>
+          <ul>
+            <li>Pix</li>
+            <li>Dinheiro</li>
+            <li>Cartão Crédito/Débito</li>
+          </ul>
+        </section>
+
+        <section
+          class="footer-section hours-info"
+          aria-labelledby="footer-hours"
+        >
+          <h4 id="footer-hours">Horário de Funcionamento</h4>
+          <ul>
+            <li>Sábado: 7h – 14h</li>
+            <li>Domingo: Fechado</li>
+            <li>Segunda-feira a Sexta-feira: 7h – 18h</li>
+          </ul>
+        </section>
+
+        <section
+          class="footer-section footer-social"
+          aria-labelledby="footer-social"
+        >
+          <h4 id="footer-social">Redes Sociais</h4>
+          <nav class="footer-social-links" aria-label="Redes sociais">
+            <a
+              href="https://www.facebook.com/obarzinho.simone"
+              aria-label="Facebook da Divino Sabor"
+              >Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/divino_sabor_simone/"
+              aria-label="Instagram da Divino Sabor"
+              >Instagram</a
+            >
+          </nav>
+        </section>
+      </div>
+    </footer>
+
+    <script src="inicial_script.js"></script>
+  </body>
+</html>
