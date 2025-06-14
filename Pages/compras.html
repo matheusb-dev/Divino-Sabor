@@ -1,76 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio</title>
-    <link rel="stylesheet" href="/Styles/style_compras.css">
-    <link rel="stylesheet" href="/Styles/style_compras_resposivo.css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-</head>
-<body>
-     <header>
-        <h1>Divino Sabor</h1>
-    </header>
-    
-    <br>
-    <br>
-    <br>
+<html lang="pt-br">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Divino Sabor - Página Inicial</title>
+  <link rel="stylesheet" href="/Styles/style_compras.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/inicial/style_inicial.css" />
+  <link rel="stylesheet" href="/Styles/style_compras_resposivo.css">
+  <style>
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-stripe"></div>
+
+  <header>
+    <div class="header-inner" role="banner">
+      <div>
+        <div class="logo" aria-label="Divino Sabor logo">Divino Sabor</div>
+        <div class="logo-subtitle">Café - Salgados - Sucos - Bebidas</div>
+      </div>
+
+      <nav class="desktop-nav" aria-label="Menu principal">
+        <a href="/index.html">Página Inicial</a>
+        <a href="#">Promoções</a>
+        <a href="/Pages/compras.html">Cardápio</a>
+        <a href="#">Contato</a>
+      </nav>
+
+      <button class="mobile-menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#ff0000" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-menu" aria-label="Menu móvel">
+      <a href="#">Página Inicial</a>
+      <a href="#">Promoções</a>
+      <a href="/Pages/compras.html">Cardápio</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+
+  <main>
     <div class="container">
-        <!-- Menu de navegação para  os diferentes tipos de salgados -->
-        <div class="menu-navegacao">
-            <div class="menu-tabelas">
-                <div class="menu-tab active" data-categoria="todos">Todos</div>
-                <div class="menu-tab" data-categoria="fritos">Fritos</div>
-                <div class="menu-tab" data-categoria="assados">Assados</div>
-                <div class="menu-tab" data-categoria="cafe">Café</div>
-                <div class="menu-tab" data-categoria="doces">Doces</div>
-                <div class="menu-tab" data-categoria="bebidas">Bebidas</div>
-            </div>
+      <!-- Menu de navegação para  os diferentes tipos de salgados -->
+      <div class="menu-navegacao">
+        <div class="menu-tabelas">
+          <div class="menu-tab active" data-categoria="todos">Todos</div>
+          <div class="menu-tab" data-categoria="fritos">Fritos</div>
+          <div class="menu-tab" data-categoria="assados">Assados</div>
+          <div class="menu-tab" data-categoria="cafe">Café</div>
+          <div class="menu-tab" data-categoria="doces">Doces</div>
+          <div class="menu-tab" data-categoria="bebidas">Bebidas</div>
         </div>
-        
-        <br>
-        
-        <div class="produtos" id="produtosLista">
-            <!-- Os produtos aqui via js  -->
-        </div>
+      </div>
+
+      <br>
+
+      <div class="produtos" id="produtosLista">
+        <!-- Os produtos aqui via js  -->
+      </div>
 
     </div>
     <br>
     <!-- Botão do carrinho -->
     <div class="cart-toggle" id="cartToggle">
-        🛒
-        <div class="cart-counter" id="cartCounter">0</div>
+      🛒
+      <div class="cart-counter" id="cartCounter">0</div>
     </div>
     <br>
     <!-- Container do carrinho -->
     <div class="carrinho-container" id="carrinhoContainer">
-        <div class="carrinho-header">
-            <div class="carrinho-titulo">Seu Carrinho</div>
-            <button class="carrinho-fechar" id="carrinhoFechar">×</button>
+      <div class="carrinho-header">
+        <div class="carrinho-titulo">Seu Carrinho</div>
+        <button class="carrinho-fechar" id="carrinhoFechar">×</button>
+      </div>
+      <br>
+      <div class="carrinho">
+        <div class="carrinho-itens" id="carrinhoItens">
+          <div class="carrinho-vazio">Seu carrinho está vazio</div>
         </div>
-        <br>
-        <div class="carrinho">
-            <div class="carrinho-itens" id="carrinhoItens">
-                <div class="carrinho-vazio">Seu carrinho está vazio</div>
-            </div>
+      </div>
+      <br>
+      <div class="carrinho-resumo">
+        <div class="carrinho-total">
+          <span>Total:</span>
+          <span id="carrinhoTotal">R$ 0,00</span>
         </div>
-        <br>
-        <div class="carrinho-resumo">
-            <div class="carrinho-total">
-                <span>Total:</span>
-                <span id="carrinhoTotal">R$ 0,00</span>
-            </div>
-            <button class="btn-enviar" id="btnEnviar">Finalizar Pedido</button>
-        </div>
+        <button class="btn-enviar" id="btnEnviar">Finalizar Pedido</button>
+      </div>
     </div>
     <br>
     <div class="feedback" id="feedback">Produto adicionado ao carrinho!</div>
+  </main>
 
-    <script src="/Scripts/compras_script.js"></script>
+
+
+  <footer role="contentinfo">
+    <div class="footer-container">
+      <section class="footer-section contact-info" aria-labelledby="footer-contact">
+        <h4 id="footer-contact">Contato</h4>
+        <p>
+          Endereço: R. Prof. Laertes Munhoz - Nova Esperança, PR, 87600-000
+        </p>
+        <p>Telefone: 44 99910-4397</p>
+        <p>Email: salgadosdomingos@gmail.com</p>
+      </section>
+
+      <section class="footer-section payment-info" aria-labelledby="footer-payment">
+        <h4 id="footer-payment">Formas de Pagamento</h4>
+        <ul>
+          <li>Pix</li>
+          <li>Dinheiro</li>
+          <li>Cartão Crédito/Débito</li>
+        </ul>
+      </section>
+
+      <section class="footer-section hours-info" aria-labelledby="footer-hours">
+        <h4 id="footer-hours">Horário de Funcionamento</h4>
+        <ul>
+          <li>Sábado: 7h – 14h</li>
+          <li>Domingo: Fechado</li>
+          <li>Segunda-feira a Sexta-feira: 7h – 18h</li>
+        </ul>
+      </section>
+
+      <section class="footer-section footer-social" aria-labelledby="footer-social">
+        <h4 id="footer-social">Redes Sociais</h4>
+        <nav class="footer-social-links" aria-label="Redes sociais">
+          <a href="https://www.facebook.com/obarzinho.simone" aria-label="Facebook da Divino Sabor">Facebook</a>
+          <a href="https://www.instagram.com/divino_sabor_simone/" aria-label="Instagram da Divino Sabor">Instagram</a>
+        </nav>
+      </section>
+    </div>
+  </footer>
+
+  <script src="/Scripts/compras_script.js"></script>
+  <script src="/inicial/inicial_script.js"></script>
 </body>
+
 </html>
