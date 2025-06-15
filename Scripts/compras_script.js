@@ -10,7 +10,7 @@ const produtos = [
     { id: 4, nome: 'Coxinha de Frango', preco:  7.00, imagem: '/Images/coxinha_frango.jpg', categoria: 'fritos' },
     
     // Enroladinho
-    { id: 5, nome: 'Enroladinho de Salsicha', preco:  7.00, imagem: '/Images/enrolado_salsicha.jpg', categoria: 'fritos' },
+    /*{ id: 5, nome: 'Enroladinho de Salsicha', preco:  7.00, imagem: '/Images/enrolado_salsicha.jpg', categoria: 'fritos' },*/
     { id: 6, nome: 'Enroladinho de Presunto e Queijo', preco: 7.00, imagem: '/Images/Enrolado_PreseuntoEQueijo.jpg', categoria: 'fritos' },
     
     // Bolinho de Carne
