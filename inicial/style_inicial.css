@@ -367,6 +367,13 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
 .about {
   margin: 4rem 0 2rem;
   padding: 1.5rem 2rem;
