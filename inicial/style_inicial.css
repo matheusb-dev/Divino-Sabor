@@ -300,6 +300,10 @@ footer {
   box-shadow: 0 10px 20px rgb(255 0 0 / 0.6);
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .header-inner {
