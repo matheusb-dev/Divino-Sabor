@@ -1,115 +1,429 @@
-/* Responsividade para diferentes dispositivos */
-@media (max-width: 768px) {
-    .produtos {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+/* Responsividade para diferentes dispositivos - VERSÃO COMPACTA */
+
+/* Correção geral - tudo menor */
+@media (min-width: 0px) {
+    .carrinho-container {
+        max-height: 50vh; /* Reduzido de 70vh */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carrinho {
+        max-height: 200px; /* Reduzido de 300px */
+        overflow-y: auto;
+        flex-grow: 1;
+        padding: 15px; /* Reduzido de 20px */
+    }
+
+    .carrinho-header {
+        flex-shrink: 0;
+        padding: 12px 15px; /* Reduzido */
+    }
+
+    .carrinho-titulo {
+        font-size: 18px; /* Reduzido de 20px */
+    }
+
+    .carrinho-resumo {
+        flex-shrink: 0;
+        margin-top: auto;
+        padding: 12px 15px; /* Reduzido */
+    }
+
+    .carrinho-item {
+        padding: 8px 0; /* Reduzido de 10px */
+    }
+
+    .carrinho-item-nome {
+        font-size: 15px; /* Reduzido */
+        margin-bottom: 3px; /* Reduzido */
+    }
+
+    .carrinho-item-detalhe {
+        font-size: 13px; /* Reduzido */
     }
 }
 
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+    .produtos {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Reduzido de 200px */
+        gap: 15px; /* Reduzido de 20px */
+    }
+
+    .menu-navegacao {
+        margin: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #e4002b #f0f0f0;
+    }
+
+    .menu-navegacao::-webkit-scrollbar {
+        height: 4px; /* Reduzido de 6px */
+    }
+
+    .menu-navegacao::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 2px;
+    }
+
+    .menu-navegacao::-webkit-scrollbar-thumb {
+        background: #e4002b;
+        border-radius: 2px;
+    }
+
+    .menu-tabelas {
+        gap: 10px; /* Reduzido de 15px */
+        padding: 10px 0 10px 15px; /* Padding só à esquerda */
+        flex-wrap: nowrap;
+        justify-content: flex-start; /* Força tudo para a esquerda */
+        min-width: max-content;
+    }
+
+    .menu-tab {
+        padding: 8px 12px; /* Reduzido */
+        font-size: 13px; /* Reduzido de 14px */
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent; /* Reduzido de 3px */
+        text-align: left; /* Alinhado à esquerda */
+    }
+
+    .menu-tab:hover {
+        background-color: #f9f9f9;
+    }
+
+    .menu-tab.active {
+        border-bottom: 2px solid #e4002b;
+        color: #e4002b;
+        font-weight: 600;
+        background-color: transparent;
+    }
+
+    .container {
+        padding: 0 10px; /* Reduzido de 15px */
+    }
+
+    .carrinho-container {
+        max-height: 45vh; /* Reduzido */
+    }
+
+    .carrinho {
+        max-height: 180px; /* Reduzido */
+        padding: 12px; /* Reduzido */
+    }
+}
+
+/* Smartphones */
 @media (max-width: 480px) {
     .produtos {
         grid-template-columns: 1fr;
+        gap: 12px; /* Reduzido de 15px */
+    }
+
+    .menu-navegacao {
+        margin: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #e4002b #f0f0f0;
+    }
+
+    .menu-navegacao::-webkit-scrollbar {
+        height: 3px; /* Reduzido de 4px */
+    }
+
+    .menu-navegacao::-webkit-scrollbar-track {
+        background: #f0f0f0;
+        border-radius: 2px;
+    }
+
+    .menu-navegacao::-webkit-scrollbar-thumb {
+        background: #e4002b;
+        border-radius: 2px;
+    }
+
+    .menu-tabelas {
+        gap: 6px; /* Reduzido de 8px */
+        padding: 8px 0 8px 12px; /* Padding só à esquerda */
+        justify-content: flex-start; /* Força tudo para a esquerda */
+        flex-wrap: nowrap;
+        min-width: max-content;
+    }
+
+    .menu-tab {
+        padding: 6px 10px; /* Reduzido */
+        font-size: 12px; /* Reduzido de 13px */
+        white-space: nowrap;
+        flex-shrink: 0;
+        min-width: 55px; /* Reduzido de 60px */
+        text-align: left; /* Alinhado à esquerda */
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+    }
+
+    .menu-tab:hover {
+        background-color: #f9f9f9;
+    }
+
+    .menu-tab.active {
+        border-bottom: 2px solid #e4002b;
+        color: #e4002b;
+        font-weight: 600;
+        background-color: transparent;
     }
 
     .produto-controles {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px; /* Reduzido de 10px */
+    }
+
+    .quantidade-controle {
+        justify-content: center;
     }
 
     .btn-adicionar {
         width: 100%;
+        padding: 8px; /* Reduzido de 10px */
+        font-size: 14px;
     }
 
     .carrinho-item {
         flex-wrap: wrap;
+        gap: 8px; /* Reduzido */
     }
 
     .carrinho-item-controles {
-        margin-top: 10px;
+        margin-top: 8px; /* Reduzido */
         margin-left: 0;
+        order: 3;
+        width: 100%;
+        justify-content: center;
     }
-}
 
-/* Estilos específicos para smartwatches */
-@media (max-width: 320px) {
-    body {
-        padding: 10px;
+    .carrinho-item-subtotal {
+        margin-left: 0;
+        order: 2;
+        font-size: 15px; /* Reduzido de 16px */
+    }
+
+    .container {
+        padding: 0 8px; /* Reduzido de 10px */
+    }
+
+    .cart-toggle {
+        width: 45px; /* Reduzido de 50px */
+        height: 45px;
+        font-size: 18px; /* Reduzido de 20px */
+    }
+
+    .feedback {
+        right: 8px;
+        left: 8px;
+        top: 8px;
+        padding: 12px 15px; /* Reduzido */
         font-size: 14px;
     }
 
-    header {
-        padding: 10px;
-        margin-bottom: 15px;
+    .carrinho-container {
+        max-height: 50vh; /* Reduzido */
     }
 
-    h1 {
-        font-size: 20px;
+    .carrinho {
+        max-height: 150px; /* Reduzido de 200px */
+        padding: 10px; /* Reduzido */
+    }
+
+    .carrinho-itens {
+        margin-bottom: 10px; /* Reduzido */
+    }
+
+    .carrinho-header {
+        padding: 10px 12px; /* Reduzido */
+    }
+
+    .carrinho-titulo {
+        font-size: 16px; /* Reduzido */
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 320px) {
+    body {
+        font-size: 13px; /* Reduzido de 14px */
+    }
+
+    .menu-navegacao {
+        margin: 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .menu-navegacao::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu-tabelas {
+        gap: 4px; /* Reduzido de 6px */
+        padding: 6px 0 6px 8px; /* Padding só à esquerda */
+        min-width: max-content;
+        justify-content: flex-start; /* Força tudo para a esquerda */
     }
 
     .menu-tab {
-        padding: 10px 15px;
-        font-size: 12px;
+        padding: 4px 8px; /* Reduzido */
+        font-size: 10px; /* Reduzido de 11px */
+        min-width: 45px; /* Reduzido de 50px */
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-align: left; /* Alinhado à esquerda */
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+    }
+
+    .menu-tab.active {
+        border-bottom: 2px solid #e4002b;
+        color: #e4002b;
+        font-weight: 600;
     }
 
     .produto-img {
-        height: 150px;
+        height: 130px; /* Reduzido de 150px */
+    }
+
+    .produto-info {
+        padding: 8px; /* Reduzido de 10px */
     }
 
     .produto-titulo {
-        font-size: 16px;
+        font-size: 15px; /* Reduzido de 16px */
+        margin-bottom: 4px; /* Reduzido */
     }
 
     .produto-preco {
-        font-size: 16px;
+        font-size: 15px; /* Reduzido de 16px */
+        margin-bottom: 8px; /* Reduzido */
     }
 
     .quantidade-controle {
         display: none;
-        /* Simplifica a interface em telas muito pequenas */
     }
 
     .btn-adicionar {
         width: 100%;
-        margin-top: 10px;
+        padding: 6px; /* Reduzido de 8px */
+        font-size: 13px; /* Reduzido */
     }
 
     .carrinho-header {
-        padding: 10px;
+        padding: 6px 8px; /* Reduzido */
     }
 
     .carrinho-titulo {
-        font-size: 16px;
+        font-size: 14px; /* Reduzido de 16px */
     }
 
-    .carrinho {
-        padding: 10px;
-        max-height: 200px;
+    .carrinho-fechar {
+        font-size: 18px; /* Reduzido de 20px */
     }
 
-    .carrinho-item-nome {
-        font-size: 14px;
-    }
-
-    .carrinho-total {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-
-    .btn-enviar {
-        padding: 10px;
-        font-size: 14px;
+    .container {
+        padding: 0 4px; /* Reduzido de 5px */
     }
 
     .cart-toggle {
-        width: 45px;
-        height: 45px;
-        font-size: 18px;
-        bottom: 10px;
-        right: 10px;
+        width: 40px; /* Reduzido de 45px */
+        height: 40px;
+        font-size: 16px; /* Reduzido */
+        bottom: 8px;
+        right: 8px;
     }
 
     .cart-counter {
-        width: 20px;
-        height: 20px;
-        font-size: 12px;
+        width: 18px; /* Reduzido de 20px */
+        height: 18px;
+        font-size: 11px; /* Reduzido */
+        top: -2px;
+        right: -2px;
+    }
+
+    .carrinho-container {
+        max-height: 60vh; /* Ajustado */
+    }
+
+    .carrinho {
+        max-height: 120px; /* Reduzido de 150px */
+        padding: 6px; /* Reduzido */
+    }
+
+    .carrinho-item-nome {
+        font-size: 13px; /* Reduzido */
+    }
+
+    .carrinho-item-detalhe {
+        font-size: 11px; /* Reduzido */
+    }
+
+    .carrinho-total {
+        font-size: 15px; /* Reduzido */
+        margin-bottom: 8px; /* Reduzido */
+    }
+
+    .btn-enviar {
+        padding: 8px; /* Reduzido */
+        font-size: 13px; /* Reduzido */
+    }
+
+    .carrinho-resumo {
+        padding: 8px; /* Reduzido */
+    }
+}
+
+/* Orientação landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+    .carrinho-container {
+        max-height: 70vh; /* Reduzido */
+    }
+
+    .carrinho {
+        max-height: 100px; /* Bem reduzido para landscape */
+    }
+
+    .menu-tabelas {
+        padding: 6px 0 6px 12px; /* Padding só à esquerda */
+        justify-content: flex-start; /* Força tudo para a esquerda */
+    }
+
+    .menu-tab {
+        padding: 4px 10px; /* Reduzido */
+        font-size: 11px; /* Reduzido */
+        text-align: left; /* Alinhado à esquerda */
+    }
+}
+
+/* Scrollbar do carrinho - mais fina */
+@media (max-width: 768px) {
+    .carrinho::-webkit-scrollbar {
+        width: 4px; /* Reduzido de 6px */
+    }
+
+    .carrinho::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 2px;
+    }
+
+    .carrinho::-webkit-scrollbar-thumb {
+        background: #e4002b;
+        border-radius: 2px;
+    }
+
+    .carrinho::-webkit-scrollbar-thumb:hover {
+        background: #c00026;
     }
 }

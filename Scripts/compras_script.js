@@ -10,16 +10,17 @@ const produtos = [
     { id: 4, nome: 'Coxinha de Frango', preco:  7.00, imagem: '/Images/coxinha_frango.jpg', categoria: 'fritos' },
     
     // Enroladinho
-    { id: 6, nome: 'Enroladinho de Salsicha', preco:  7.00, imagem: '/Images/enrolado_salsicha.jpg', categoria: 'fritos' },
-    { id: 7, nome: 'Enroladinho de Presunto e Queijo', preco: 7.00, imagem: '/Images/Enrolado_PreseuntoEQueijo.jpg', categoria: 'fritos' },
+    { id: 5, nome: 'Enroladinho de Salsicha', preco:  7.00, imagem: '/Images/enrolado_salsicha.jpg', categoria: 'fritos' },
+    { id: 6, nome: 'Enroladinho de Presunto e Queijo', preco: 7.00, imagem: '/Images/Enrolado_PreseuntoEQueijo.jpg', categoria: 'fritos' },
     
     // Bolinho de Carne
-    { id: 8, nome: 'Bolinho de carne', preco:  9.00, imagem: '/Images/bolinho_carne.jpg', categoria: 'fritos' },
+    { id: 7, nome: 'Bolinho de carne', preco:  9.00, imagem: '/Images/bolinho_carne.jpg', categoria: 'fritos' },
 
     // Pedaço Pizza
     { id: 8, nome: 'Pedaço D. Pizza', preco:  9.00, imagem: '/Images/pedaco_pizza.jpg', categoria: 'fritos' },
 
-    // Kibes (3 sabores)
+
+    /*// Kibes (3 sabores)
     { id: 9, nome: 'Kibe com Ovo', preco:  7.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
     { id: 10, nome: 'Kibe com Queijo', preco:  7.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
     { id: 11, nome: 'Kibe Tradicional', preco:  7.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
@@ -28,7 +29,7 @@ const produtos = [
     { id: 12, nome: 'Fogazza Presunto e Queijo', preco: 9.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
     { id: 13, nome: 'Fogazza Carne com Queijo', preco: 9.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
     { id: 14, nome: 'Fogazza Frango com Catupiry', preco: 9.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
-    { id: 15, nome: 'Fogazza X-Tudo', preco: 9.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },
+    { id: 15, nome: 'Fogazza X-Tudo', preco: 9.00, imagem: '/api/placeholder/250/200', categoria: 'fritos' },*/
 
 
 
@@ -39,40 +40,42 @@ const produtos = [
 
     //Tortas
     { id: 18, nome: 'Frango Com Salsicha', preco: 9.00, imagem: '/Images/frangocsalsicha.jpg', categoria: 'assados' },
+    { id: 19, nome: 'Torta De Carne', preco: 9.00, imagem: '/Images/torta_de_carne.png', categoria: 'assados' },
 
     //cachorro_quente
-    { id: 19, nome: 'Cachorro Quente', preco: 9.00, imagem: '/Images/Cachorro_quente.jpg', categoria: 'assados' },
+    { id: 20, nome: 'Cachorro Quente', preco: 9.00, imagem: '/Images/Cachorro_quente.jpg', categoria: 'assados' },
 
     //esfihas abertas
-    { id: 20, nome: 'Esfiha Aberta', preco: 6.00, imagem: '/Images/esfiha_aberta.png', categoria: 'assados' },
+    { id: 21, nome: 'Esfiha Aberta', preco: 6.00, imagem: '/Images/esfiha_aberta.png', categoria: 'assados' },
 
     //Empadas
-    { id: 21, nome: 'Empadas', preco: 11.00, imagem: '/Images/empadas.png', categoria: 'assados' },
+    { id: 22, nome: 'Empadas', preco: 11.00, imagem: '/Images/empadas.png', categoria: 'assados' },
 
     // Empadões
-    { id: 22, nome: 'Empadão De Palmito', preco: 9.00, imagem: '/Images/empadao_palmito.jpg', categoria: 'assados' },
+    { id: 23, nome: 'Empadão De Palmito', preco: 9.00, imagem: '/Images/empadao_palmito.jpg', categoria: 'assados' },
     
     // Pão de Batata
-    { id: 23, nome: 'Pão De Batata', preco: 9.00, imagem: '/Images/batata_pq.jpg', categoria: 'assados' },
+    { id: 24, nome: 'Pão De Batata', preco: 9.00, imagem: '/Images/batata_pq.jpg', categoria: 'assados' },
     
 
     // === CAFÉ ===
-    { id: 24, nome: 'Café', preco: 3.00, imagem: '/Images/cafe.jpg', categoria: 'cafe' },
-    { id: 25, nome: 'Pão de Queijo', preco: 2.50, imagem: '/Images/cafe_paoQueijo.jpg', categoria: 'cafe' },
+    { id: 25, nome: 'Café', preco: 3.00, imagem: '/Images/cafe.jpg', categoria: 'cafe' },
+    { id: 26, nome: 'Pão de Queijo', preco: 2.50, imagem: '/Images/cafe_paoQueijo.jpg', categoria: 'cafe' },
+    { id: 27, nome: 'Cappuccino', preco: 12.00, imagem: '/Images/Cappuccino.jpg', categoria: 'cafe' },
 
 
     // === DOCES ===
-    { id: 26,  nome: 'Torta Alemã - Chocolate ', preco: 10.00, imagem: '/Images/torta_alema.jpg', categoria: 'doces' },
-    { id: 27,  nome: 'Torta Alemã - Morango ', preco: 10.00, imagem: '/Images/torta_alema2.jpg', categoria: 'doces' },
-    { id: 28,  nome: 'Bolo Milho ', preco: 10.00, imagem: '/Images/Bolo_Milho.jpg', categoria: 'doces' },
-    { id: 28,  nome: 'Rosca Doce ', preco: 2.00, imagem: '/Images/rosca.jpg', categoria: 'doces' },
+    { id: 28,  nome: 'Torta Alemã - Chocolate ', preco: 10.00, imagem: '/Images/torta_alema.jpg', categoria: 'doces' },
+    { id: 29,  nome: 'Torta Alemã - Morango ', preco: 10.00, imagem: '/Images/torta_alema2.jpg', categoria: 'doces' },
+    { id: 30,  nome: 'Bolo Milho ', preco: 10.00, imagem: '/Images/Bolo_Milho.jpg', categoria: 'doces' },
+    { id: 31,  nome: 'Rosca Doce ', preco: 2.00, imagem: '/Images/rosca.jpg', categoria: 'doces' },
 
 
     // === BEBIDAS ===
-    { id: 29, nome: 'Coca Cola 350ml', preco: 5.00, imagem: '/Images/coca350ml.jpg', categoria: 'bebidas' },
-    { id: 30, nome: 'Água Mineral', preco: 4.00, imagem: '/Images/agua.jpg', categoria: 'bebidas' },
-    { id: 31, nome: 'Suco Natural', preco: 8.00, imagem: '/Images/suco_laranja.jpg', categoria: 'bebidas' },
-    { id: 32, nome: 'Cappuccino', preco: 12.00, imagem: '/Images/Cappuccino.jpg', categoria: 'cafe' },
+    { id: 32, nome: 'Coca Cola 350ml', preco: 5.00, imagem: '/Images/coca350ml.jpg', categoria: 'bebidas' },
+    { id: 33, nome: 'Água Mineral', preco: 4.00, imagem: '/Images/agua.jpg', categoria: 'bebidas' },
+    { id: 34, nome: 'Suco Natural', preco: 8.00, imagem: '/Images/suco_laranja.jpg', categoria: 'bebidas' },
+    { id: 35, nome: 'Cappuccino', preco: 12.00, imagem: '/Images/Cappuccino.jpg', categoria: 'bebidas' },
 ];
 // Carrinho de compras
 let carrinho = [];
