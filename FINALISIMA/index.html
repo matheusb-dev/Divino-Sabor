@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divino Sabor - Promoções</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!DOCTYPE html>
-<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Divino Sabor - Cabeçalho</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divino Sabor - Promoções</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="inicial/style_inicial.css" />
   </head>
   <body>
@@ -34,7 +23,7 @@
         </div>
 
         <nav class="desktop-nav" aria-label="Menu principal">
-          <a href="#">Página Inicial</a>
+          <a href="/index.html">Página Inicial</a>
           <a href="#">Promoções</a>
           <a href="/Pages/compras.html">Cardápio</a>
           <a href="#">Contato</a>
@@ -65,69 +54,87 @@
       </nav>
     </header>
 
+    <main class="conteudo-principal">
+      <div class="carrossel-container">
+        <button class="carrossel-btn" id="btn-anterior">&#10094;</button>
+        <div class="carrossel" id="carrossel"></div>
+        <button class="carrossel-btn" id="btn-proximo">&#10095;</button>
+      </div>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-container">
+        <section
+          class="footer-section contact-info"
+          aria-labelledby="footer-contact"
+        >
+          <h4 id="footer-contact">Contato</h4>
+          <p>
+            Endereço: R. Prof. Laertes Munhoz - Nova Esperança, PR, 87600-000
+          </p>
+          <p>Telefone: 44 99910-4397</p>
+          <p>Email: salgadosdomingos@gmail.com</p>
+        </section>
+
+        <section
+          class="footer-section payment-info"
+          aria-labelledby="footer-payment"
+        >
+          <h4 id="footer-payment">Formas de Pagamento</h4>
+          <ul>
+            <li>Pix</li>
+            <li>Dinheiro</li>
+            <li>Cartão Crédito/Débito</li>
+          </ul>
+        </section>
+
+        <section
+          class="footer-section hours-info"
+          aria-labelledby="footer-hours"
+        >
+          <h4 id="footer-hours">Horário de Funcionamento</h4>
+          <ul>
+            <li>Sábado: 7h – 14h</li>
+            <li>Domingo: Fechado</li>
+            <li>Segunda-feira a Sexta-feira: 7h – 18h</li>
+          </ul>
+        </section>
+
+        <section
+          class="footer-section footer-social"
+          aria-labelledby="footer-social"
+        >
+          <h4 id="footer-social">Redes Sociais</h4>
+          <nav class="footer-social-links" aria-label="Redes sociais">
+            <a
+              href="https://www.facebook.com/obarzinho.simone"
+              aria-label="Facebook"
+              >Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/divino_sabor_simone/"
+              aria-label="Instagram"
+              >Instagram</a
+            >
+          </nav>
+        </section>
+      </div>
+    </footer>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span>
+        <img id="modal-img" src="" alt="" />
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-descricao"></p>
+        <p>
+          <del id="modal-preco-antigo"></del>
+          <strong id="modal-preco-novo"></strong>
+        </p>
+      </div>
+    </div>
+
     <script src="inicial/inicial_script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
-
-
-  <main class="conteudo-principal">
-    <div class="carrossel-container">
-      <button class="carrossel-btn" id="btn-anterior">&#10094;</button>
-      <div class="carrossel" id="carrossel"></div>
-      <button class="carrossel-btn" id="btn-proximo">&#10095;</button>
-    </div>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="footer-container">
-      <section class="footer-section contact-info" aria-labelledby="footer-contact">
-        <h4 id="footer-contact">Contato</h4>
-        <p>Endereço: R. Prof. Laertes Munhoz - Nova Esperança, PR, 87600-000</p>
-        <p>Telefone: 44 99910-4397</p>
-        <p>Email: salgadosdomingos@gmail.com</p>
-      </section>
-
-      <section class="footer-section payment-info" aria-labelledby="footer-payment">
-        <h4 id="footer-payment">Formas de Pagamento</h4>
-        <ul>
-          <li>Pix</li>
-          <li>Dinheiro</li>
-          <li>Cartão Crédito/Débito</li>
-        </ul>
-      </section>
-
-      <section class="footer-section hours-info" aria-labelledby="footer-hours">
-        <h4 id="footer-hours">Horário de Funcionamento</h4>
-        <ul>
-          <li>Sábado: 7h – 14h</li>
-          <li>Domingo: Fechado</li>
-          <li>Segunda-feira a Sexta-feira: 7h – 18h</li>
-        </ul>
-      </section>
-
-      <section class="footer-section footer-social" aria-labelledby="footer-social">
-        <h4 id="footer-social">Redes Sociais</h4>
-        <nav class="footer-social-links" aria-label="Redes sociais">
-          <a href="https://www.facebook.com/obarzinho.simone" aria-label="Facebook">Facebook</a>
-          <a href="https://www.instagram.com/divino_sabor_simone/" aria-label="Instagram">Instagram</a>
-        </nav>
-      </section>
-    </div>
-  </footer>
-
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fecharModal()">&times;</span>
-      <img id="modal-img" src="" alt="" />
-      <h2 id="modal-titulo"></h2>
-      <p id="modal-descricao"></p>
-      <p><del id="modal-preco-antigo"></del> <strong id="modal-preco-novo"></strong></p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
-
-

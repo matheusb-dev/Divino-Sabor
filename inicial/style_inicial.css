@@ -291,7 +291,6 @@ footer {
   border: none;
 }
 
-/* Classe para evitar quebra de linha */
 .nowrap {
   white-space: nowrap;
 }
@@ -305,7 +304,6 @@ footer {
   box-shadow: 0 10px 20px rgb(255 0 0 / 0.6);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .header-inner {
     flex-wrap: wrap;
@@ -340,7 +338,6 @@ footer {
   }
 }
 
-/* Aqui a mudança que reduz o tamanho da fonte do h1 na seção hero para mobile */
 @media (max-width: 480px) {
   .logo {
     font-size: 2rem;
