@@ -75,7 +75,7 @@ const produtos = [
     { id: 32, nome: 'Coca Cola 350ml', preco: 5.00, imagem: '/Images/coca350ml.jpg', categoria: 'bebidas' },
     { id: 33, nome: 'Água Mineral', preco: 4.00, imagem: '/Images/agua.jpg', categoria: 'bebidas' },
     { id: 34, nome: 'Suco Natural', preco: 8.00, imagem: '/Images/suco_laranja.jpg', categoria: 'bebidas' },
-    { id: 35, nome: 'Cappuccino', preco: 12.00, imagem: '/Images/Cappuccino.jpg', categoria: 'bebidas' },
+    /*{ id: 35, nome: 'Cappuccino', preco: 12.00, imagem: '/Images/Cappuccino.jpg', categoria: 'bebidas' },*/
 ];
 // Carrinho de compras
 let carrinho = [];
