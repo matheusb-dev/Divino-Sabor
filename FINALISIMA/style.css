@@ -26,7 +26,8 @@ body {
 }
 
 .carrossel {
-  width: 600px;
+  width: 100%; /* Alterado para 100% para responsividade */
+  max-width: 600px; /* Limite máximo para telas maiores */
   overflow: hidden;
   position: relative;
 }
@@ -38,7 +39,7 @@ body {
 }
 
 .produto {
-  min-width: 600px;
+  min-width: 100%; /* Alterado para 100% para ajustar largura em telas menores */
   background: #fff;
   border: 2px solid #ffe4b5;
   border-radius: 10px;
@@ -56,7 +57,8 @@ body {
 }
 
 .produto img {
-  width: 85%;
+  width: 100%; /* 100% para preencher o container do produto */
+  height: auto; /* Mantém proporção correta da imagem */
   border-radius: 5px;
   object-fit: cover;
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
