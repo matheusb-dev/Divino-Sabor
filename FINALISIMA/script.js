@@ -80,9 +80,15 @@ function renderTodosProdutos() {
   updateSlidePosition();
 }
 
+// Atualiza a posição do slide com base na largura real do item exibido
 function updateSlidePosition() {
   const carrosselInner = document.getElementById("carrossel-inner");
-  carrosselInner.style.transform = `translateX(-${indiceAtual * 600}px)`;
+  const carrossel = document.getElementById("carrossel");
+  // Largura do container (carrossel) - garante responsividade
+  const larguraProduto = carrossel.clientWidth;
+  carrosselInner.style.transform = `translateX(-${
+    indiceAtual * larguraProduto
+  }px)`;
 }
 
 document.getElementById("btn-anterior").addEventListener("click", () => {
@@ -95,9 +101,12 @@ document.getElementById("btn-proximo").addEventListener("click", () => {
   updateSlidePosition();
 });
 
+window.addEventListener("resize", () => {
+  // Recalcula posicao quando a tela é redimensionada para manter o slide correto
+  updateSlidePosition();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
-  const carrossel = document.getElementById("carrossel");
-  carrossel.innerHTML = `<div class="carrossel-inner" id="carrossel-inner"></div>`;
   renderTodosProdutos();
 });
 

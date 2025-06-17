@@ -2,14 +2,13 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Divino Sabor - Promoções</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="inicial/style_inicial.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="top-stripe"></div>
@@ -23,7 +22,7 @@
 
         <nav class="desktop-nav" aria-label="Menu principal">
           <a href="/index.html">Página Inicial</a>
-          <a href="/FINALISIMA/index.html">Promoções</a>
+          <a href="/FINALISIMA/index.html" aria-current="page">Promoções</a>
           <a href="/Pages/compras.html">Cardápio</a>
           <a href="/CONTATO/index.html">Contato</a>
         </nav>
@@ -54,12 +53,28 @@
     </header>
 
     <main class="conteudo-principal">
-      <div class="carrossel-container">
-        <button class="carrossel-btn" id="btn-anterior">&#10094;</button>
+      <div
+        class="carrossel-container"
+        aria-label="Carrossel de promoções"
+        role="region"
+      >
+        <button
+          class="carrossel-btn"
+          id="btn-anterior"
+          aria-label="Promoção Anterior"
+        >
+          &#10094;
+        </button>
         <div class="carrossel" id="carrossel">
           <div class="carrossel-inner" id="carrossel-inner"></div>
         </div>
-        <button class="carrossel-btn" id="btn-proximo">&#10095;</button>
+        <button
+          class="carrossel-btn"
+          id="btn-proximo"
+          aria-label="Próxima promoção"
+        >
+          &#10095;
+        </button>
       </div>
     </main>
 
@@ -122,9 +137,17 @@
       </div>
     </footer>
 
-    <div id="modal" class="modal">
+    <div
+      id="modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-titulo"
+    >
       <div class="modal-content">
-        <span class="close" onclick="fecharModal()">&times;</span>
+        <button class="close" onclick="fecharModal()" aria-label="Fechar modal">
+          &times;
+        </button>
         <img id="modal-img" src="" alt="" />
         <h2 id="modal-titulo"></h2>
         <p id="modal-descricao"></p>
@@ -135,7 +158,6 @@
       </div>
     </div>
 
-    <script src="inicial/inicial_script.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
